@@ -15,7 +15,7 @@ resource "aws_lambda_function" "sagemaker_image_handler" {
 
   environment {
     variables = {
-      DOMAIN_NAME = var.domain_id
+      DOMAIN_NAME = var.sagemaker_domain_id
       REPO_NAME   = aws_ecr_repository.this.name
       SM_ROLE_ARN = var.sagemaker_role_arn
       REGION      = data.aws_region.current.name

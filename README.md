@@ -42,14 +42,14 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_domain_id"></a> [domain\_id](#input\_domain\_id) | n/a | `any` | n/a | yes |
 | <a name="input_image_type"></a> [image\_type](#input\_image\_type) | Whether it should handle JupyterLab or CodeEditor images | `string` | `"jupyter"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name of the stack | `string` | `"example-name"` | no |
-| <a name="input_sagemaker_role_arn"></a> [sagemaker\_role\_arn](#input\_sagemaker\_role\_arn) | n/a | `any` | n/a | yes |
-| <a name="input_tags"></a> [tags](#input\_tags) | Tags | `map(string)` | n/a | yes |
+| <a name="input_sagemaker_domain_id"></a> [sagemaker\_domain\_id](#input\_sagemaker\_domain\_id) | ID of SageMaker domain. Used as a target of auto attacher | `string` | n/a | yes |
+| <a name="input_sagemaker_role_arn"></a> [sagemaker\_role\_arn](#input\_sagemaker\_role\_arn) | ARN of SageMaker role. Used for attaching the image properly | `string` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | Map of tags | `map(string)` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_jupyter_ecr_arn"></a> [jupyter\_ecr\_arn](#output\_jupyter\_ecr\_arn) | n/a |
+| <a name="output_ecr_arn"></a> [jupyter\_ecr\_arn](#output\_jupyter\_ecr\_arn) | n/a |

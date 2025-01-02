@@ -4,17 +4,14 @@ variable "name" {
   default     = "example-name"
 }
 
-variable "tags" {
-  description = "Tags"
-  type        = map(string)
-}
-
-variable "domain_id"{
-
+variable "sagemaker_domain_id"{
+  description = "ID of SageMaker domain. Used as a target of auto attacher"
+  type        = string
 }
 
 variable "sagemaker_role_arn" {
-  
+  description = "ARN of SageMaker role. Used for attaching the image properly"
+  type        = string
 }
 
 variable "image_type" {
@@ -25,4 +22,9 @@ variable "image_type" {
     condition     = var.image_type == "jupyter" || var.image_type == "code_editor"
     error_message = "image_type must be either 'jupyter' or 'code_editor'."
   }
+}
+
+variable "tags" {
+  description = "Map of tags"
+  type        = map(string)
 }
