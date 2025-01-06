@@ -1,6 +1,6 @@
 resource "aws_ecr_repository" "this" {
   name                 = "${var.name}"
-  image_tag_mutability = "IMMUTABLE" #PARAMETER
+  image_tag_mutability = var.ecr_immutable ? "IMMUTABLE" : "MUTABLE"
 
   tags = var.tags
 }
