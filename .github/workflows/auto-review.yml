@@ -7,8 +7,8 @@ on:
 
 jobs:
   auto-review:
-    env:
-      GPT_TOKEN: ${{ secrets.GPT_TOKEN }}
     permissions:
       pull-requests: write 
     uses: xAdRx/auto-reviewer/.github/workflows/review.yml@test
+    secrets:
+      GPT_TOKEN: ${{ secrets.GPT_TOKEN }}
