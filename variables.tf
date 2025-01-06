@@ -25,6 +25,12 @@ variable "image_type" {
   }
 }
 
+variable "ecr_immutable" {
+  description = "Whether ECR repository should be immutable or not"
+  type = bool
+  default = true
+}
+
 variable "tags" {
   description = "Map of tags"
   type        = map(string)
