@@ -16,6 +16,7 @@ variable "sagemaker_role_arn" {
 
 variable "image_type" {
   description = "Whether it should handle JupyterLab or CodeEditor images"
+  type        = string
   default = "jupyter"
 
    validation {
