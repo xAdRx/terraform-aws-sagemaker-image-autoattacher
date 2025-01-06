@@ -1,0 +1,10 @@
+name: Default pull request pipeline
+
+on:
+    workflow_call:
+    pull_request:
+      branches: [ "master" ]
+
+jobs:
+  call_reusable_workflow:
+    uses: xAdRx/auto-reviewer/.github/workflows/review.yml@master

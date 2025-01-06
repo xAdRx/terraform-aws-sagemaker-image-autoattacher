@@ -2,20 +2,12 @@
 
 This module contains ECR registry for your SageMaker images with EventBridge scanning the events for push or remove event on that ECR. Depending on the image_type variable it will automatically attach your image to SageMaker domain.
 
-## Requirements
-
-No requirements.
-
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_archive"></a> [archive](#provider\_archive) | n/a |
 | <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
-
-## Modules
-
-No modules.
 
 ## Resources
 
