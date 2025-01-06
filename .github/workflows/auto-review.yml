@@ -1,4 +1,4 @@
-name: Default pull request pipeline
+name: Auto-review pipeline
 
 on:
     workflow_call:
@@ -6,5 +6,7 @@ on:
       branches: [ "master" ]
 
 jobs:
-  call_reusable_workflow:
+  auto-review:
+    permissions:
+      pull-requests: write 
     uses: xAdRx/auto-reviewer/.github/workflows/review.yml@master
