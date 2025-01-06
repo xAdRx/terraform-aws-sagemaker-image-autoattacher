@@ -9,4 +9,4 @@ jobs:
   auto-review:
     permissions:
       pull-requests: write 
-    uses: xAdRx/auto-reviewer/.github/workflows/review.yml@master
+    uses: xAdRx/auto-reviewer/.github/workflows/review.yml@test
