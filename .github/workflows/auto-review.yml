@@ -1,0 +1,17 @@
+name: Auto-review pipeline
+
+on:
+    workflow_call:
+    pull_request:
+      branches: [ "master" ]
+
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GPT_TOKEN: ${{ secrets.GPT_TOKEN }}
+
+jobs:
+  auto-review:
+    permissions:
+      pull-requests: write 
+    uses: xAdRx/auto-reviewer/.github/workflows/review.yml@test
+    secrets: inherit
