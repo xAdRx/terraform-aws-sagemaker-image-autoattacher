@@ -31,6 +31,12 @@ variable "ecr_immutable" {
   default = true
 }
 
+variable "ecr_lifecycle_policy" {
+  description = "ECR Lifecycle policy"
+  type = string
+  default = null
+}
+
 variable "tags" {
   description = "Map of tags"
   type        = map(string)

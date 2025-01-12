@@ -10,7 +10,7 @@ resource "aws_lambda_function" "sagemaker_image_handler" {
   role             = aws_iam_role.sagemaker_image_handler.arn
   handler          = "main.lambda_handler"
   source_code_hash = filebase64sha256(data.archive_file.sagemaker_image_handler.output_path)
-  runtime          = "python3.12"#PARAMETER
+  runtime          = "python3.12"
   timeout          = 30
 
   environment {
