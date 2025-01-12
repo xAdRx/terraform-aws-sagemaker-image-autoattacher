@@ -2,20 +2,12 @@
 
 This module contains ECR registry for your SageMaker images with EventBridge scanning the events for push or remove event on that ECR. Depending on the image_type variable it will automatically attach your image to SageMaker domain.
 
-## Requirements
-
-No requirements.
-
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_archive"></a> [archive](#provider\_archive) | n/a |
 | <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
-
-## Modules
-
-No modules.
 
 ## Resources
 
@@ -42,6 +34,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_ecr_immutable"></a> [ecr\_immutable](#input\_ecr\_immutable) | Whether ECR repository should be immutable or not | `bool` | `true` | no |
 | <a name="input_image_type"></a> [image\_type](#input\_image\_type) | Whether it should handle JupyterLab or CodeEditor images | `string` | `"jupyter"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name of the stack | `string` | `"example-name"` | no |
 | <a name="input_sagemaker_domain_id"></a> [sagemaker\_domain\_id](#input\_sagemaker\_domain\_id) | ID of SageMaker domain. Used as a target of auto attacher | `string` | n/a | yes |
@@ -52,4 +45,4 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_ecr_arn"></a> [jupyter\_ecr\_arn](#output\_jupyter\_ecr\_arn) | n/a |
+| <a name="output_ecr_arn"></a> [ecr\_arn](#output\_ecr\_arn) | n/a |
